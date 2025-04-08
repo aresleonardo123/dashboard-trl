@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Reporte de Evaluación TRL</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f2f2;
+      padding: 40px;
+      color: #333;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .estado {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 20px 0;
+    }
+
+    .aprobado {
+      color: green;
+    }
+
+    .rechazado {
+      color: red;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #eef2f5;
+    }
+
+    .print-btn {
+      display: block;
+      margin: 20px auto;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    @media print {
+      .print-btn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Reporte de Evaluación TRL</h1>
+
+    <p><strong>Nombre del Proyecto:</strong> ${nombre}</p>
+    <p class="estado ${estado_clase}">${estado_texto}</p>
+
+    <h2>Puntajes por segmento</h2>
+    <table>
+      <tr><th>Segmento TRL</th><th>Puntaje</th></tr>
+      <tr><td>TRL 1–3</td><td>${trl13}</td></tr>
+      <tr><td>TRL 4–7</td><td>${trl47}</td></tr>
+      <tr><td>TRL 8–9</td><td>${trl89}</td></tr>
+    </table>
+
+    <button class="print-btn" onclick="window.print()">🖨️ Imprimir</button>
+  </div>
+
+</body>
+</html>

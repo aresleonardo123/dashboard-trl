@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Reporte{% endblock %}</title>
+    <style>
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+        }
+      </style>      
+    <link rel="stylesheet" href="{{ url_for('static', path='css/template.css') }}">
+    <!-- Alternativa directa: -->
+    <!-- <link rel="stylesheet" href="/static/css/template.css"> -->
+</head>
+<body>
+    {% block content %}{% endblock %}
+</body>
+</html>

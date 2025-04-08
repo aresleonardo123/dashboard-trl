@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+/* === Neue Plak Fonts === */
+@font-face {
+  font-family: 'Neue Plak';
+  src: url('./assets/fonts/Neue Plak Light.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Plak';
+  src: url('./assets/fonts/Neue Plak Regular.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Plak';
+  src: url('./assets/fonts/Neue Plak SemiBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Plak';
+  src: url('./assets/fonts/Neue Plak Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Plak';
+  src: url('./assets/fonts/Neue Plak ExtraBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Puedes agregar variantes condensed o narrow si necesitas separarlas */
+
+
+body {
+  font-family: 'Neue Plak', sans-serif;
+}
+
+
+.projects-page {
+  padding: 20px;
+}
+
+.metrics, .visualizations, .search-project {
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  width: 100%;
+  height: 400px;
+}
+
+input, button {
+  margin-top: 10px;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-modal, .print-modal * {
+    visibility: visible;
+  }
+  .print-modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
