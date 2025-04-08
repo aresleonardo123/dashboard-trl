@@ -13,13 +13,14 @@ jobs:
       - name: 🔄 Clonar repositorio
         uses: actions/checkout@v3
 
-      - name: 📦 Configurar Docker build
-        run: |
-          docker build -t myapp:latest .
+      - name: 🔐 Login a Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_54D069DACC084CB4B82067EF66D66C2A }}
 
-      - name: 🚀 Deploy a Azure Web App con perfil de publicación
+      - name: 🚀 Deploy usando Dockerfile
         uses: azure/webapps-deploy@v2
         with:
           app-name: ares
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_54D069DACC084CB4B82067EF66D66C2A }}
-          images: myapp:latest
+          package: .
