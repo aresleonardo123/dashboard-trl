@@ -26,8 +26,8 @@ RUN mkdir -p /app/templates/static
 COPY --from=frontend-builder /frontend/dist/assets /app/templates/static
 COPY --from=frontend-builder /frontend/dist/index.html /app/templates/static/index.html
 
-EXPOSE 2375
+EXPOSE 80
 
 # ✅ Usa el CMD como string en lugar de lista JSON (más compatible)
-CMD ["uvicorn", "backend_api:app", "--host", "0.0.0.0", "--port", "2375"]
+CMD ["uvicorn", "backend_api:app", "--host", "0.0.0.0", "--port", "80"]
 
