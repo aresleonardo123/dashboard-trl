@@ -1,4 +1,4 @@
-name: 🚀 Deploy Docker image to Azure Web App
+name: 🚀 Deploy Docker image to Azure Web2 App
 
 on:
   push:
