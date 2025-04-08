@@ -23,4 +23,4 @@ jobs:
         with:
           app-name: ares
           slot-name: production
-          images: 'DOCKER|Dockerfile'
+          images: 'DOCKER|'
